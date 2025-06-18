@@ -13,13 +13,7 @@
 </head>
 <body>
     {% include "13_Header.html" %}
-   
-    <marquee class="marquee" onmouseover="stop()" onmouseout="start()">
-        {% for news in newsData%}
-        <a href="/news/{{news.news_slug}}">{{news.News_title}} &nbsp;&nbsp;</a>
-         
-          {% endfor %}
-    </marquee>
+  
    
     
     

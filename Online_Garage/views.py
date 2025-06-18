@@ -24,8 +24,7 @@ def newsDetails(request,slug):
 @login_required(login_url='login')
 def index (request):
     
-   
-    NewsData=News.objects.all().order_by('News_title')[:2]
+
     serviceData=Service.objects.all()
     paginator=Paginator(serviceData,2)
     page_number=request.GET.get('page')
@@ -40,7 +39,7 @@ def index (request):
         'serviceData':serviceDataFinal,
         'lastpage':totalpage,
         'totalPagelist':[n+1 for n in range(totalpage)],
-        "newsData":NewsData
+   
     }
     return render(request,"1_index.html",data)
 

@@ -1,6 +1,0 @@
-
-    
-
-# Register your models here.
-
-
