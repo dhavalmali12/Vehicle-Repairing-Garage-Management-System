@@ -12,6 +12,13 @@ from django.contrib.auth.decorators import login_required
 from booking.models import Booking_Model
 from django.contrib.auth import authenticate, login
 
+def newsDetails(request,slug):
+    newsDetails=News.objects.get(news_slug=slug)
+    
+    data={
+        'newsDetails':newsDetails
+    }
+    return render(request,"20_newsDetails.html",data)
 
 
 @login_required(login_url='login')
