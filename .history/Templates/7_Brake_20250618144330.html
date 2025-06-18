@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brake & Suspension Repair</title>
+         {% load static %}
+    <link rel="stylesheet" href="{% static 'Css/7_Brake.css'%}">
+</head>
+<body>
+      {% include "13_Header.html" %}
+      
+      
+      <header>
+          <h1>Brake & Suspension Repair</h1>
+        </header>
+        
+        <section class="service-container">
+            <img src="/Static/Img/Brake.jpg" alt="Brake and Suspension Service">
+            <div class="service-content">
+                
+                <h2>Professional Brake & Suspension Repair</h2>
+                <p>Ensure safety and smooth driving with our expert brake and suspension repair services. We diagnose and fix braking issues, suspension problems, and enhance vehicle stability.</p>
+                
+                <h3>Services Offered:</h3>
+                <ul>
+                    <li>Brake Pad & Disc Replacement</li>
+                    <li>Brake Fluid Check & Refill</li>
+                <li>Suspension System Inspection</li>
+                <li>Shock Absorber & Strut Replacement</li>
+                <li>Wheel Alignment & Balancing</li>
+            </ul>
+            
+            
+          <a href="{% url 'register' %}" class="btn">Book Service</a>
+        </div>
+    </section>
+    {% include "14_Footer.html" %}
+    
+</body>
+</html>

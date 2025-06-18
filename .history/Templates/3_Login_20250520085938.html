@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Car Repair</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Css/3_Login.css'%}">
+</head>
+<body>
+      {% include "13_Header.html" %}
+      
+      
+      <div class="login-container">
+          <h2>Login to Your Account</h2>
+        
+          <form method="POST">
+            {% csrf_token %}
+              <div class="input-group">
+                  <label>Email ID</label>
+                  <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                <input type="password"id="password" name="password" placeholder="Enter your password" required>
+                <span class="toggle-password" onclick="togglePassword()">👁</span>
+                <br>
+               
+                <input type="email" value="{{email}}">
+                <input type="password" value="{{password}}">
+               
+                
+            </div>
+            
+
+
+
+            <button type="submit" class="btn">Login</button>
+
+            <p class="register-link">Don't have an account? <a href="D:\SEM -6 PROJECT\4_Register.html">Register Here</a></p>
+        </form>
+    </div>
+    {% include "14_Footer.html" %}
+    
+    <script src="/Static/Js/3_Login.js"></script>
+</body>
+</html>

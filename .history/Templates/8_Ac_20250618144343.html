@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC & Electrical System Repair</title>
+       {% load static %}
+    <link rel="stylesheet" href="{% static 'Css/8_Ac.css'%}">
+</head>
+<body>
+  {% include "13_Header.html" %}
+  
+  <header>
+      <h1>AC & Electrical System Repair</h1>
+    </header>
+    
+    <section class="service-container">
+        
+        <img src="/Static/Img/Ac.jpg" alt="AC and Electrical System Repair">
+        <div class="service-content">
+            <h2>Expert AC & Electrical System Services</h2>
+            <p>We provide professional AC servicing, wiring repair, and complete electrical diagnostics to ensure your car’s electrical system runs smoothly.</p>
+            
+            <h3>Services Offered:</h3>
+            <ul>
+                <li>AC Gas Refill & Leak Check</li>
+                <li>AC Compressor & Cooling System Repair</li>
+                <li>Electrical Wiring Inspection</li>
+                <li>Headlights, Indicators & Interior Lights Repair</li>
+                <li>Battery & Alternator 
+                    
+                    Diagnostics</li>
+                </ul>
+                
+              <a href="{% url 'register' %}" class="btn">Book Service</a>
+            </div>
+        </section>
+        {% include "14_Footer.html" %}
+        
+    </body>
+    </html>
+    

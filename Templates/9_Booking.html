@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Booking</title>
+        {% load static %}
+    <link rel="stylesheet" href="{% static 'Css/9_Booking.css'%}">
+</head>
+<body>
+      {% include "13_Header.html" %}
+      
+      
+      <header>
+          <h1>Book Your Car Service</h1>
+        </header>
+       
+            <section class="booking-container">
+            <h2>Fill the Details</h2>
+            <form action="#" method="POST">
+                {% csrf_token %}
+                <label for="name">Full Name:</label>
+                
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="car-model">Car Model:</label>
+                <input type="text" id="car-model" name="car-model" required>
+                
+                <label for="service">Select Service:</label>
+                <select id="service" name="service" required>
+                    
+                    <option value="engine">Engine Repair</option>
+                    <option value="battery">Battery Check & Replacement</option>
+                    <option value="brake">Brake & Suspension Repair</option>
+                    <option value="ac">AC & Electrical System Repair</option>
+                </select>
+                
+                <label for="date">Preferred Service Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="message">Additional Message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                
+                <button type="submit" 
+                
+                class="btn">Book Now</button>
+            </form>
+        </section>
+        {% include "14_Footer.html" %}
+
+</body>
+</html>

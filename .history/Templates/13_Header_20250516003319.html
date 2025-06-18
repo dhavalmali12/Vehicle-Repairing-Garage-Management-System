@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Css/1_Style.css'%}">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">GarageWale</div>
+        <ul class="nav-links">
+       
+            <li class="{% if request.path == '/' %}active{% endif %}"><a href="/">Home</a></li>
+            <li class="{% if request.path == '/login/' %}active{% endif %}"><a href="/login">Login</a></li>
+            <li class="{% if request.path == '/register/' %}active{% endif %}"><a href="/register">Register</a></li>
+            <li class="dropdown">
+                <a href="#">Services ▼</a>
+                <ul class="dropdown-menu">
+
+                    <li><a href="/engine_Service">Engine Service</a></li>
+                  
+                    <li><a href="/battery_Service">Battery Check & Replacement</a></li>
+                    <li><a href="/brake_Service">Brake & Suspension Repair</a></li>
+                    <li><a href="/ac_Service">Ac & Electrical  Repair</a></li>
+                </ul>
+            </li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/offer">Offers & Discounts</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">&#9776;</div>
+        <script src="/Static/Js/1_index.js"></script>
+    </nav>
+
+    
+</body>
+</html>
+
+  
